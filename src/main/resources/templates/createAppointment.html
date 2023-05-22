@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Appointment</title>
+</head>
+<body>
+<h2>Create Appointment</h2>
+<form action="#" th:action="@{/createEvent}" th:object="${appointment}" method="post">
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" th:field="*{description}"><br>
+    <label for="startDateTime">Start Time:</label><br>
+    <input type="datetime-local" id="startDateTime" th:field="*{startDateTime}"><br>
+    <label for="endDateTime">End Time:</label><br>
+    <input type="datetime-local" id="endDateTime" th:field="*{endDateTime}"><br>
+    <label for="reminderDateTime">Reminder Time:</label><br>
+    <input type="datetime-local" id="reminderDateTime" th:field="*{reminderDateTime}"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
